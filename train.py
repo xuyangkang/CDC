@@ -25,6 +25,13 @@ def train_model(train, vecs, words):
 
     model.fit(data_x, data_y, epochs=30, batch_size=20, validation_split=0.1)
 
+    model_json = model.to_json()
+    with open("model.json", "w") as json_file:
+        json_file.write(model_json)
+    # serialize weights to HDF5
+    model.save_weights("model.h5")
+    print("Saved model to disk")
+
 
 if __name__ == '__main__':
     train_model()
