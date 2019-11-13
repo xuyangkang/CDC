@@ -23,7 +23,8 @@ def train_model(train, vecs, words):
                   optimizer='sgd',
                   metrics=['accuracy'])
 
-    model.fit(data_x, data_y, epochs=30, batch_size=20, validation_split=0.1)
+    # model.fit(data_x, data_y, epochs=30, batch_size=20, validation_split=0.1)
+    model.fit(data_x, data_y, epochs=30, batch_size=20)
 
     model_json = model.to_json()
     with open("model.json", "w") as json_file:
