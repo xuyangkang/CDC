@@ -34,4 +34,5 @@ def train_model(train, vecs, words):
 
 
 if __name__ == '__main__':
+    # pylint: disable=locally-disabled, no-value-for-parameter
     train_model()

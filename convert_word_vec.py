@@ -50,4 +50,5 @@ def convert_word_vec(input, vecs, words):
 
 
 if __name__ == '__main__':
+    # pylint: disable=locally-disabled, no-value-for-parameter
     convert_word_vec()

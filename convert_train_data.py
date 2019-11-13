@@ -31,5 +31,7 @@ def convert_train_data(train, vecs, words):
     np.save('data_x.npy', data_x)
     np.save('data_y.npy', data_y)
 
+
 if __name__ == '__main__':
+    # pylint: disable=locally-disabled, no-value-for-parameter
     convert_train_data()
